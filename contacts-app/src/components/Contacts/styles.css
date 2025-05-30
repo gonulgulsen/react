@@ -1,0 +1,74 @@
+#container {
+  width: 400px;
+  background-color: aliceblue;
+  padding: 20px;
+}
+
+input {
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 8px;
+    margin-bottom:2px;
+}
+
+/* box-sizing: border-box;
+Bu özellik sayesinde, elementin genişliğine (width) padding ve border da dahil edilir.
+Yani, width: 100% yazdığında, padding ve border da dahil toplam genişlik %100 olur.
+Eskiden (varsayılan box-sizing: content-box iken)
+Genişliğe sadece içerik dahil olurdu, padding ve border eklenince taşma olurdu.
+Modern pratikte: Herkes box-sizing: border-box kullanır, çünkü taşma/bozulma riskini azaltır.
+
+Tarayıcı Uyumluluğu için Prefiksler
+-webkit-box-sizing: Eski Safari ve Chrome sürümleri için.
+-moz-box-sizing: Eski Firefox sürümleri için. */
+
+ul, li {
+    margin:0;
+    padding:0;
+    list-style-type: none;
+}
+
+.list {
+    margin:15px 0;
+}
+
+/* margin: ÜST SAĞ ALT SOL; */
+/* 2 değer olursa: margin: 10px 5px; → üst-alt: 10px, sağ-sol: 5px
+3 değer olursa: margin: 10px 5px 2px; → üst: 10px, sağ-sol: 5px, alt: 2px */
+
+
+.list > li {
+    background-color: antiquewhite;
+    padding: 5px;
+    margin-bottom: 2px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .list > li	Sadece birinci seviye çocuk <li>’leri seçer (araya başka element girerse seçmez)
+.list li	.list altında her seviyede olan tüm <li>’leri seçer */
+
+/* <ul className="list">
+  <li>A</li>
+  <li>B
+    <ul>
+      <li>B1</li>
+      <li>B2</li>
+    </ul>
+  </li>
+</ul>
+.list > li ⇒ sadece A ve B
+.list li ⇒ A, B, B1, B2 */
+
+.btn {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px 0;
+}
+
+.btn > button {
+    padding: 5px;
+    width: 60px;
+}
