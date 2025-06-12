@@ -1,5 +1,5 @@
 import './App.css';
-import { Formik, Field, Form } from 'formik'; 
+import { Formik } from 'formik'; 
 
 function App() {
   return (
@@ -13,26 +13,33 @@ function App() {
       }}
       onSubmit={(values) =>{ console.log(values)}}
     >
-      <Form>
+      {
+        ({handleSubmit, handleChange})=> (
+      
+      <form onSubmit={handleSubmit}>
         <label htmlFor="firstName">First Name</label>
-        <Field name="firstName" placeholder="Jane" />
+        <input name="firstName" placeholder="Jane" />
         {/* Burada initialValues daki değerin ismi ile name aynı olmalı */}
           <br/>
           <br/>
         <label htmlFor="lastName">Last Name</label>
-        <Field name="lastName" placeholder="Doe" />
+        <input name="lastName" onChange={handleChange} placeholder="Doe" />
         <br/>
         <br/>
         <label htmlFor="email">Email</label>
-        <Field
+        <input
           name="email"
           placeholder="jane@acme.com"
           type="email"
+          onChange={handleChange}
         />
         <br/>
         <br/>
         <button type="submit">Submit</button>
-      </Form>
+      </form>
+        )
+      }
+
     </Formik>
     </div>
   );
