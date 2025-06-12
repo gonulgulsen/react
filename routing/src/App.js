@@ -8,7 +8,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link
+  NavLink
 } from "react-router-dom";
 
 function App() {
@@ -18,13 +18,13 @@ function App() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <NavLink to="/" className={({isActive}) => isActive ? "active" : undefined}>Home</NavLink>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <NavLink to="/about" className={({isActive}) => isActive ? "active" : undefined}>About</NavLink>
             </li>
             <li>
-              <Link to="/users">Users</Link>
+              <NavLink to="/users" className={({isActive}) => isActive ? "active" : undefined}>Users</NavLink>
             </li>
           </ul>
         </nav>
