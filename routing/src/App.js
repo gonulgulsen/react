@@ -2,7 +2,7 @@ import './App.css';
 import Home from './components/Home';
 import Users from './components/Users';
 import About from './components/About';
-import User from './components/User';
+import Error404 from './components/Error404';
 
 import {
   BrowserRouter as Router,
@@ -41,6 +41,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/users/*" element={<Users />} /> 
+          <Route path='*' element={<Error404/>} />
         </Routes>
       </div>
     </Router>
