@@ -1,0 +1,84 @@
+.weather-list {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: center;
+  border-radius: 10px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 0;
+}
+
+.weather-card {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  min-width: 100px;
+  text-align: center;
+  box-shadow: 0 2px 8px #f0f0f0;
+  transition: 0.3s;
+}
+
+.weather-card.today {
+  background: #eee;
+  border: 2px solid orange;
+  box-shadow: 0 4px 16px #ffe4b3;
+}
+
+.weather-day {
+  margin-bottom: 6px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.weather-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.weather-desc {
+  margin-top: 8px;
+  font-size: 0.95em;
+  color: #888;
+}
+
+.weather-temp {
+  margin-top: 8px;
+  font-size: 1.1em;
+}
+
+.App {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+
+.header-wrapper {
+  background: #f7fbfd;
+  margin: 20px 0 0 0;
+  border-radius: 10px;
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 5px;
+  text-align: left;
+}
+
+.weather-header {
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  height: 50px;
+}
+
+.city-select {
+  font-size: 16px;
+  padding: 6px 16px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background: #fff;
+  outline: none;
+  margin-right: 5px;
+  box-shadow: 0 2px 6px #f0f0f0;
+}
